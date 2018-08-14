@@ -27,8 +27,9 @@ export default {
         }
     },
     methods: {
-        removeTodo(){
-            console.log('removeTOdo clicked');
+        removeTodo(todoItem, index){
+            localStorage.removeItem(todoItem);
+            this.todoItems.splice(index, 1);
         }
     }    
 }
